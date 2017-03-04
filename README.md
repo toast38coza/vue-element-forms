@@ -14,7 +14,7 @@ npm install --save npm install git+https://git@github.com/toast38coza/vue-elemen
 
 **Data**
 
-``` json
+``` javascript
 
 // Data
 export const CONTACT_FORM_DATA = {
