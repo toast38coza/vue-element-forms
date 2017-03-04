@@ -14,7 +14,8 @@ npm install --save npm install git+https://git@github.com/toast38coza/vue-elemen
 
 **Data**
 
-```
+``` json
+
 // Data
 export const CONTACT_FORM_DATA = {
   data: {
@@ -44,7 +45,8 @@ export const CONTACT_FORM_DATA = {
 ```
 
 **JavaScript**
-```
+``` javascript
+
 import ElDataForm from 'vue-element-forms/src/components/ElDataForm'
 
 export default {
@@ -60,7 +62,7 @@ export default {
 
 **HTML:**
 
-```
+``` html
 <!-- basic -->
 <el-data-form
   v-model='contactFormData.data'
