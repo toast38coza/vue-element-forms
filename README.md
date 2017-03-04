@@ -1,6 +1,6 @@
-# tracer-registration
+# vue-element-forms
 
-> Registration widget for Tracer App
+> Data driven forms for VueJS and [Element.io](http://element.eleme.io/)
 
 ## Getting started
 
