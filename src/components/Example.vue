@@ -7,14 +7,19 @@
         @eldataform:validationchanged='validationChanged'
         v-model='contactFormData.data'
         :rules='contactFormData.rules' >
+        <div slot='postalCode' >
+          This is a custom field: <input v-model='contactFormData.data.postalCode' />
+        </div>
       </el-data-form>
     </div>
+    <!--
     <div>
       <h4>Code:</h4>
       <pre><code>
 ..
       </code></pre>
     </div>
+    -->
   </el-col>
   <el-col :span="12" >
     <div class='bg-silver' style='padding:10px;' >

@@ -2,6 +2,89 @@
 
 > Registration widget for Tracer App
 
+## Getting started
+
+**Install**
+
+```
+npm install --save npm install git+https://git@github.com/toast38coza/vue-element-forms
+```
+
+**Use:**
+
+**Data**
+
+```
+// Data
+export const CONTACT_FORM_DATA = {
+  data: {
+  	name: 'Joe Soap',
+  	email: null,
+  	phone: null,
+  	address: null,
+  	postalCode: null,
+  	suburb: null
+  },
+  rules: {
+    name: [
+      { required: true, message: 'Company name is required', trigger: 'change' }
+    ],
+    email: [
+      { required: true, message: 'Email is required', trigger: 'change' },
+      { type: 'email', message: 'Please provide a valid email', trigger: 'change' }
+
+    ],
+    phone: [
+      { required: true, message: 'Company name is required', trigger: 'change' },
+      { type: 'number', message: 'Phone number should contain only numbers', trigger: 'change' },
+      { min: 6, message: 'Phone number must be at least 6 characters long', trigger: 'change' }
+    ]
+  }
+}
+```
+
+**JavaScript**
+```
+import ElDataForm from 'vue-element-forms/src/components/ElDataForm'
+
+export default {
+  name: 'ExampleForm',
+  components: { ElDataForm },
+  data () {
+    return {
+      contactFormData: CONTACT_FORM_DATA
+    }
+  }
+}
+```
+
+**HTML:**
+
+```
+<!-- basic -->
+<el-data-form
+  v-model='contactFormData.data'
+  :rules='contactFormData.rules' >
+</el-data-form>
+
+<!-- you can also override the input for any field -->
+<el-data-form
+  v-model='contactFormData.data'
+  :rules='contactFormData.rules' >
+  <div slot='postalCode' >
+    This is a custom field: <input v-model='contactFormData.data.postalCode' />
+  </div>
+</el-data-form>
+```
+
+**Todo**
+
+- [ ] Form Builder
+- [ ] Support more types of inputs (currently just supports text)
+- [ ] Inform the parent of the validation status
+- [ ] Support all `el-form`'s props
+- [ ] ...
+
 ## Build Setup
 
 ``` bash

@@ -14,32 +14,20 @@ export const CONTACT_FORM_DATA = {
     email: [
       { required: true, message: 'Email is required', trigger: 'change' },
       { type: 'email', message: 'Please provide a valid email', trigger: 'change' }
-
     ],
     phone: [
       { required: true, message: 'Company name is required', trigger: 'change' },
+      { type: 'number', message: 'Phone number should contain only numbers', trigger: 'change' },
       { min: 6, message: 'Phone number must be at least 6 characters long', trigger: 'change' }
     ],
     address: [
-      {
-        required: true,
-        message: 'address is required',
-        trigger: 'change'
-      }
+      { required: true, message: 'address is required', trigger: 'change' }
     ],
     postalCode: [
-      {
-        required: true,
-        message: 'postal code is required',
-        trigger: 'change'
-      }
+      { required: true, message: 'postal code is required', trigger: 'change' }
     ],
     suburb: [
-      {
-        required: true,
-        message: 'suburb is required',
-        trigger: 'change'
-      }
+      { required: true, message: 'suburb is required', trigger: 'change' }
     ]
   }
 }

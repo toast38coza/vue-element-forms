@@ -16,7 +16,6 @@
   </el-form-item>
   </slot>
   </template>
-  <button @click.prevent='validate' ></button>
 </el-form>
 </div>
 </template>
